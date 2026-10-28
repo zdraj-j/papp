@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Póliza de vehículos — administración</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<div class="app" id="app" hidden>
+
+  <aside class="lateral">
+    <div class="marca">
+      <span class="marca__nombre">Póliza de vehículos</span>
+      <span class="marca__detalle" id="marcaPoliza">C-10537</span>
+    </div>
+
+    <nav class="menu" id="menu">
+      <a href="#/inicio"        data-vista="inicio">Panel</a>
+      <a href="#/vehiculos"     data-vista="vehiculos">Vehículos</a>
+      <a href="#/colaboradores" data-vista="colaboradores">Colaboradores</a>
+      <a href="#/movimientos"   data-vista="movimientos">Movimientos</a>
+      <a href="#/cobros"        data-vista="cobros">Cobros</a>
+      <a href="#/plano"         data-vista="plano">Archivo plano</a>
+      <a href="#/ajustes"       data-vista="ajustes">Ajustes</a>
+    </nav>
+
+    <div class="lateral__pie">
+      <p class="almacen" id="estadoAlmacen"></p>
+      <button type="button" class="boton boton--tenue" id="btnReconectar" hidden>Reconectar carpeta</button>
+    </div>
+  </aside>
+
+  <main class="principal" id="principal"></main>
+</div>
+
+<!-- Pantalla inicial: escoger dónde viven los datos -->
+<div class="portada" id="portada">
+  <div class="portada__caja">
+    <h1>Póliza colectiva de automóviles</h1>
+    <p class="portada__intro">
+      Administra la base de vehículos asegurados, registra las novedades del mes,
+      concilia el pre-cobro de la aseguradora y genera el archivo de descuentos
+      para gestión humana. Los datos quedan en tu equipo.
+    </p>
+
+    <div class="portada__acciones" id="portadaAcciones"></div>
+    <p class="portada__nota" id="portadaNota"></p>
+  </div>
+</div>
+
+<div class="avisos" id="avisos" aria-live="polite"></div>
+
+<div class="velo" id="velo" hidden>
+  <div class="hoja" id="hoja" role="dialog" aria-modal="true"></div>
+</div>
+
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="js/util.js"></script>
+<script src="js/almacen.js"></script>
+<script src="js/modelo.js"></script>
+<script src="js/cobro.js"></script>
+<script src="js/plano.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/vistas.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

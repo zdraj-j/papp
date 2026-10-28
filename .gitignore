@@ -1,0 +1,14 @@
+# Datos de la póliza: cédulas y nombres de colaboradores.
+# Nunca deben subirse al repositorio público.
+base.json
+cobros/
+planos/
+respaldos/
+*.xlsx
+*.xls
+plano_*.txt
+base-*.json
+
+# Sistema
+.DS_Store
+Thumbs.db

@@ -27,6 +27,12 @@
 *{ box-sizing:border-box; }
 html{ -webkit-text-size-adjust:100%; }
 
+/* El atributo hidden lo aplica el navegador con [hidden]{display:none}, una
+   regla suya que cualquier display: del autor sobrescribe. Como más abajo se
+   usa display:grid y display:flex en .app, .portada y .velo, hay que
+   reafirmarla aquí o esos bloques se ven aunque estén ocultos. */
+[hidden]{ display:none !important; }
+
 body{
   margin:0; background:var(--papel); color:var(--tinta);
   font-family:var(--sans); font-size:14.5px; line-height:1.5;
